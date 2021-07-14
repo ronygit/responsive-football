@@ -112,6 +112,23 @@ styles for all the top links
 }
 /* media queries */
 @media screen and (max-width:1000px){
+    .banner{
+        grid-template-columns: none;
+        row-gap: 100px;
+        
+    }
+    .banner-title{
+        font-size: 2em;
+    }
+
+    
+    .banner-image img{
+        width: 80%;
+
+    } 
+
+}
+@media screen and (max-width:750px){
     .navbar{
         position: relative;
     }
@@ -147,19 +164,4 @@ styles for all the top links
         opacity: 1;
         
     }
-    .banner{
-        grid-template-columns: none;
-        row-gap: 100px;
-        
-    }
-    .banner-title{
-        font-size: 2em;
-    }
-
-    
-.banner-image img{
-    width: 80%;
-
-} 
-
 }
