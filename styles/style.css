@@ -25,6 +25,7 @@ styles for the top blue background part
 section.top{
     background-color: #2D25A0;  
     padding: 42px 123px 80px 156px;  
+    padding: 3% 5% 5% 6%;  
     display: grid;
     grid-template-columns: 1fr;
     row-gap: 50px;
@@ -42,9 +43,18 @@ styles for all the top links
     align-items: center;
 } 
 
-.navbar .links a{
+.navbar .links{
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    display: flex;
+}
+.navbar .links li{
 
     padding-right: 20px;
+} 
+.navbar .links a{
+
     font-weight: 500;
 } 
 
@@ -89,7 +99,67 @@ styles for all the top links
 }
 
 .banner-image img{
-    /* height: 438px; */
+    width: 100%;
+
+} 
+
+.checkbtn{
+    display: none;
+}
+
+#check{
+    display: none;
+}
+/* media queries */
+@media screen and (max-width:1000px){
+    .navbar{
+        position: relative;
+    }
+    
+    .checkbtn{
+        display: block;
+    }
+
+    .navbar .links{
+        position: absolute;
+        top:5px;
+        left: 15px;
+        opacity: 0;
+        background-color: rgba(153, 205, 50, 0.397);
+        padding-left: 10px;
+        padding-top: 10px;
+        display: flex;
+        flex-direction: column;
+        transition: opacity 1s ease;
+        
+    }
+    .navbar .links a{
+        /* color:rebeccapurple; */
+        background-color:rgba(210, 100, 237, 0.548);
+        /* display: block; */
+        font-size: 11px;
+        font-weight: 700;
+
+        margin-top: 5px;
+    }
+
+    #check:checked ~ .links{
+        opacity: 1;
+        
+    }
+    .banner{
+        grid-template-columns: none;
+        row-gap: 100px;
+        
+    }
+    .banner-title{
+        font-size: 2em;
+    }
+
+    
+.banner-image img{
     width: 80%;
 
 } 
+
+}
