@@ -15,6 +15,8 @@ section.top{
     height: 677px;
     padding: 42px 123px 0 156px;
     color: #FFFFFF;
+    display: grid;
+    grid-template-columns: 1fr;
     
 }
 
@@ -25,22 +27,50 @@ styles for all the top links
 nav{
     padding-top: 10px;
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1.5fr 1fr;
 } 
+
+nav .links {
+
+    display: flex;
+}
 
 nav .links a{
     color: #FFFFFF;
     text-decoration: none;
     margin-right:36px;
+    font-weight: 500;
 } 
 
 nav .login-button{
     text-align: right;
 
 }
+
 nav .login-button a{
     color: #FFFFFF;
     text-decoration: none;
     background-color: #E02C6D;
     padding: 10px 24px;
 } 
+
+/* styles for banner */
+.banner{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    column-gap: 102px;
+
+}
+.banner > .banner-info > .banner-title{
+    font-size: 4em;
+    font-weight: 700;
+}
+.banner-image  {
+    text-align: right;
+    padding-right: 17px ;
+}
+.banner-image img{
+    height: 438px;
+    width: 556px;
+
+}
