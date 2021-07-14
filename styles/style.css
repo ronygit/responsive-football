@@ -1,0 +1,46 @@
+/* fonts import */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+body{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+
+/*-----------------
+styles for the top blue background part
+-------------------*/
+
+section.top{
+    background-color: #2D25A0;
+    height: 677px;
+    padding: 42px 123px 0 156px;
+    color: #FFFFFF;
+    
+}
+
+/*-----------------
+styles for all the top links
+-------------------*/
+
+nav{
+    padding-top: 10px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+} 
+
+nav .links a{
+    color: #FFFFFF;
+    text-decoration: none;
+    margin-right:36px;
+} 
+
+nav .login-button{
+    text-align: right;
+
+}
+nav .login-button a{
+    color: #FFFFFF;
+    text-decoration: none;
+    background-color: #E02C6D;
+    padding: 10px 24px;
+} 
