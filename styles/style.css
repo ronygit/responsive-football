@@ -28,7 +28,6 @@ section.top{
     padding: 3% 5% 5% 6%;  
     display: grid;
     grid-template-columns: 1fr;
-    row-gap: 50px;
     color: #FFFFFF;
         
 }
@@ -76,7 +75,7 @@ styles for all the top links
 } 
  
 
-.button{
+.button a{
     color: #FFFFFF;
     background-color: #E02C6D;
     padding: 5px 20px;
@@ -89,6 +88,7 @@ styles for all the top links
 /* styles for banner */
 
 .banner{
+    margin-top: 50px;
     display: grid;
     grid-template-columns: repeat(2,1fr);
     
@@ -103,9 +103,12 @@ styles for all the top links
 .banner-title{
     font-size: 3em;
     font-weight: 700;
-    margin-bottom: 10px;
+    margin:0;
 }
 
+.button {
+    margin-top: 10px;
+}
 .button .fa-arrow-right{
     padding-left: 5px;
 }
@@ -132,19 +135,21 @@ styles for all the top links
 
 
 /* style for  players biography section, the middle part of the page */
+main{
+    width: 80%;
+    margin: auto;
+}
 
 .players{
     display: grid;
     grid-template-columns: repeat(3,1fr);
     column-gap: 2%;
-    row-gap: 2%;
-    width: 80%;
-    margin: auto;
     margin-top: 100px;
 
 }
 
 .player{
+    margin-top: 25px;
     padding: 4% 4%;
     box-shadow: 0 0 10px rgb(0 0 0 / 50%);
 
@@ -161,7 +166,13 @@ styles for all the top links
     color: #6C6C6C;
 }
 
+.highlights{
+    margin-top: 100px;
+}
 
+.highlights .banner-info{
+    width: 80%;
+}
 
 
 /* media queries */
@@ -177,7 +188,7 @@ styles for all the top links
 
     
     .banner-image img{
-        width: 80%;
+        width: 100%;
 
     } 
     .players{
