@@ -138,13 +138,14 @@ styles for all the top links
 main{
     width: 80%;
     margin: auto;
+    margin-top: 100px;
 }
 
 .players{
     display: grid;
     grid-template-columns: repeat(3,1fr);
     column-gap: 2%;
-    margin-top: 100px;
+
 
 }
 
@@ -175,6 +176,36 @@ main{
 }
 
 
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+footer .logo{
+    text-align: center;
+    margin-top: 10px;
+}
+
+footer .logo img{
+    width: 50%;
+}
+
+footer .copyright{
+    margin-top: 20px;
+}
+
+footer .icons i{
+    font-size: 1em;
+    padding: 10px;
+    background-color: rgb(218, 208, 208);
+    border-radius: 50%;
+    margin-right: 10px;
+    
+}
 /* media queries */
 @media screen and (max-width:1000px){
     .banner{
@@ -232,9 +263,33 @@ main{
         
     }
 
+    .banner{
+        margin-top:  40px ;
+        row-gap: 50px;
+    }
+    .banner-title{
+        font-size: 1.2em;
+    }    
+
+    main{
+        margin-top: 20px;
+    }
     .players{
         grid-template-columns: repeat(1,1fr);    
     }    
+    .player-name{
+        font-size: 1em;
+    }
+    .player-bio{
+        font-size: .8em;
+    }
 
+    footer{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    footer .icons i{
+        font-size: .8em;        
+    }
 }
 
