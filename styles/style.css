@@ -30,8 +30,20 @@ section.top{
     grid-template-columns: 1fr;
     row-gap: 50px;
     color: #FFFFFF;
-    
+        
 }
+
+section.top:hover{
+    animation: background-color-change 2s ease 0.5s infinite alternate;
+}
+
+/* The animation code */
+@keyframes background-color-change {
+    0%   {background-color: #2D25A0;}
+    100%  {background-color: rgba(45, 37, 160, 0.80);}
+
+  }
+  
 
 /*-----------------
 styles for all the top links
@@ -57,6 +69,12 @@ styles for all the top links
 
     font-weight: 500;
 } 
+
+.navbar .links a:hover{
+
+    color:violet;
+} 
+ 
 
 .button{
     color: #FFFFFF;
@@ -105,11 +123,47 @@ styles for all the top links
 
 .checkbtn{
     display: none;
+    cursor: pointer;
 }
 
 #check{
     display: none;
 }
+
+
+/* style for  players biography section, the middle part of the page */
+
+.players{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 2%;
+    row-gap: 2%;
+    width: 80%;
+    margin: auto;
+    margin-top: 100px;
+
+}
+
+.player{
+    padding: 4% 4%;
+    box-shadow: 0 0 10px rgb(0 0 0 / 50%);
+
+}
+.player img{
+    width: 100%;
+}
+
+.player-name{
+    font-size: 2.5em;
+}
+.player-bio{
+    font-size: 1.2em;
+    color: #6C6C6C;
+}
+
+
+
+
 /* media queries */
 @media screen and (max-width:1000px){
     .banner{
@@ -126,6 +180,9 @@ styles for all the top links
         width: 80%;
 
     } 
+    .players{
+        grid-template-columns: repeat(2,1fr);    
+    }    
 
 }
 @media screen and (max-width:750px){
@@ -142,7 +199,7 @@ styles for all the top links
         top:5px;
         left: 15px;
         opacity: 0;
-        background-color: rgba(153, 205, 50, 0.397);
+        background-color: rgba(153, 205, 50, 0.596);
         padding-left: 10px;
         padding-top: 10px;
         display: flex;
@@ -151,17 +208,22 @@ styles for all the top links
         
     }
     .navbar .links a{
-        /* color:rebeccapurple; */
-        background-color:rgba(210, 100, 237, 0.548);
-        /* display: block; */
-        font-size: 11px;
-        font-weight: 700;
-
-        margin-top: 5px;
+        color:white;
+        font-size: 1em;
+        font-weight: 900;
+        color: black;
+        display: inline-block;
+        margin-top: 10px;
     }
 
     #check:checked ~ .links{
         opacity: 1;
         
     }
+
+    .players{
+        grid-template-columns: repeat(1,1fr);    
+    }    
+
 }
+
